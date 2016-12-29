@@ -1,0 +1,21 @@
+
+<h1>Search!</h1>
+
+<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+<h3>matches</h3>
+<ul>
+    <li *ngFor="let country of matches">
+        <div>
+            <label>Name: </label>
+            {{country.name}}
+        </div>
+        <div>
+            <label>Code: </label>
+            {{country.code}}
+        </div>
+    </li>
+</ul>
+
+<h3>raw json</h3>
+<pre>this.countriesData = {{ countriesData | json }}</pre>
